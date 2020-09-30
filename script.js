@@ -19,7 +19,7 @@ generateBtn.addEventListener("click", writePassword);
 
 var confirmLength = ""
 
-
+8
 
 //Prompt and Confirm
 
