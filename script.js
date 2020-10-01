@@ -7,39 +7,53 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-//Arrays
+function generatePassword() {
+  //Arrays
 
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  var numbers = "0123456789";
+  var specialCharacter = "!$%&'?()*+,-./:;<=>?@[]^_`{|}";
+  var passwordresult = ""
 
+  //Prompt and Confirm
 
-var confirmLength = ""
+  var confirmLength = prompt(
+    "What length of passowrd do you need? Please select any length between 8 and 128."
+  );
 
-8
+  while (isNaN(confirmLength)) {
+    alert("Please enter valid number between 8 and 128");
+    confirmLength = prompt(
+      "What length of passowrd do you need? Please select any length between 8 and 128."
+    );
+  }
 
-//Prompt and Confirm
+  while (confirmLength <= 7 || confirmLength > 128) {
+    alert(
+      "Password Length must be between 8-128 characters. Please enter the length again"
+    );
+    confirmLength = prompt(
+      "What length of passowrd do you need? Please select any length between 8 and 128."
+    );
+  }
 
-var confirmLength = prompt("What length of passowrd do you need? Please select any length between 8 and 128.")
+  var confirmLowerCase = confirm("Do you want lowercase in your password?");
 
-while (confirmLength <=7 || confirmLenth > 128) {
-  alert("Password Length must be between 8-128 characters. Please enter the length again")
-  var confirmLength = prompt("What length of passowrd do you need? Please select any length between 8 and 128.")
+  var confirmUpperCase = confirm("Do you want lowercase in your password?");
+
+  var numbers = confirm("Do you want numbers in your password?");
+
+  var specialChar = confirm("Do you want special characters in your password?");
+
+ passwordresult=11 
+ return passwordresult
 }
-
-var confirmLowerCase = confirm("Do you want lowercase in your password?")
-
-var confirmUpperCase = confirm("Do you want lowercase in your password?")
-
-var numbers = confirm("Do you want numbers in your password?")
-
-var specialChar = confirm("Do you want special characters in your password?")
-
-
-
 
 // GIVEN I need a new, secure password
 // WHEN I click the button to generate a password
