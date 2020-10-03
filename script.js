@@ -13,19 +13,20 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
-
   //Arrays
   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lowerCase = "abcdefghijklmnopqrstuvwxyz";
   var numbers = "0123456789";
   var specialCharacter = "!$%&'?()*+,-./:;<=>?@[]^_`{|}";
-  var passwordResult = " ";
+ 
+  //Declare password result variable for below conditions:
+  var passwordResult = "";
 
   //Prompt and Confirm parameters
   var confirmLength = prompt(
     "What length of passowrd do you need? Please select any length between 8 and 128."
   );
-
+   
   while (isNaN(confirmLength)) {
     alert("Please enter valid number between 8 and 128");
     confirmLength = prompt(
@@ -45,49 +46,59 @@ function generatePassword() {
   var confirmLowerCase = confirm("Do you want lowercase in your password?");
   var confirmUpperCase = confirm("Do you want uppercase in your password?");
   var confirmNumbers = confirm("Do you want numbers in your password?");
-  var confirmSpecialChar = confirm("Do you want special characters in your password?");
+  var confirmSpecialChar = confirm(
+    "Do you want special characters in your password?"
+  );
 
   // If no confirm is made by user, ask again to confirm. while loop if all confirms are false
 
-  while(confirmLowerCase === false && confirmUpperCase === false &&  confirmNumbers === false && confirmSpecialChar === false){
+  while (
+    confirmLowerCase === false &&
+    confirmUpperCase === false &&
+    confirmNumbers === false &&
+    confirmSpecialChar === false
+  ) {
     alert("Please choose at least one parameter");
     var confirmLowerCase = confirm("Do you want lowercase in your password?");
     var confirmUpperCase = confirm("Do you want uppercase in your password?");
     var confirmNumbers = confirm("Do you want numbers in your password?");
-    var confirmSpecialChar = confirm("Do you want special characters in your password?");
-  }
-
-  //set of conditions
-
-  if (confirmLowerCase) {
-    passwordResult = passwordResult.concat(lowerCase)
-  }
-
-  if(confirmUpperCase) {
-    passwordResult = passwordResult.concat(upperCase)
-  }
-
-  if(confirmNumbers) {
-    passwordResult = passwordResult.concat(numbers)
-  }
-
-  if(confirmSpecialChar) {
-    passwordResult = passwordResult.concat(specialCharacter)
-  }
-
-console.log(passwordResult);
-
-//Calculation
-
-var finalPassword = "";
-
-  for (i = 0; i < confirmLength; i++) {
-    finalPassword = finalPassword + passwordResult.chartAt(
-      Math.floor(Math.random() * passwordResult.length)
+    var confirmSpecialChar = confirm(
+      "Do you want special characters in your password?"
     );
   }
-   document.querySelector("Your Secure Password").value = finalPassword
-}
+
+
+  //Sets of conditions
+
+  if (confirmLowerCase === true) {
+    passwordResult = passwordResult.concat(lowerCase);
+  }
+
+  if (confirmUpperCase === true) {
+    passwordResult = passwordResult.concat(upperCase);
+  }
+
+  if (confirmNumbers === true) {
+    passwordResult = passwordResult.concat(numbers);
+  }
+
+  if (confirmSpecialChar === true) {
+    passwordResult = passwordResult.concat(specialCharacter);
+  }
+
+console.log(passwordResult)
+    
+//Declare variable for password:
+  var finalPassword = "";
+
+  //for loop
+  for (i = 0; confirmLength > i; i++) {
+    finalPassword += passwordResult.charAt(Math.floor(Math.random() * passwordResult.length));
+  }
+  return(finalPassword);
+  }
+
+
 
 // GIVEN I need a new, secure password
 // WHEN I click the button to generate a password
