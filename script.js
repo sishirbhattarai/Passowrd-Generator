@@ -85,8 +85,6 @@ function generatePassword() {
   if (confirmSpecialChar === true) {
     passwordResult = passwordResult.concat(specialCharacter);
   }
-
-console.log(passwordResult)
     
 //Declare variable for password:
   var finalPassword = "";
