@@ -17,7 +17,8 @@ SO THAT I can create a strong password that provides greater security
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
 
-![Capture 1](./img/Capture.png)
+![](./img/Capture.png)
+
 
 THEN I am presented with a series of prompts for password criteria
 WHEN prompted for password criteria
@@ -36,7 +37,7 @@ THEN the password is either displayed in an alert or written to the page
 
 The following image demonstrates the application functionality:
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
+![password generator demo](./img/03-javascript-homework-demo.png)
 
 ## Review
 
