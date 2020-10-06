@@ -12,8 +12,7 @@ I WANT to randomly generate a password that meets certain criteria
 SO THAT I can create a strong password that provides greater security
 ```
 
-## Acceptance Criteria
-
+## Criteria
 
 
 WHEN I click the button to generate a password
@@ -27,7 +26,6 @@ THEN I choose a length of at least 8 characters and no more than 128 characters
 
 WHEN prompted for character types to include in the password
 THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
 
 ![](./img/Capture5.PNG)
 
@@ -41,21 +39,11 @@ WHEN none of the above prompts are answered, it will alert to choose atleast one
 
 ![](./img/Capture10.PNG)
 
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
+Password is genearted as below
 
 ![](./img/Capture4.PNG)
 
-The following image demonstrates the application functionality:
 
-![password generator demo](./img/03-javascript-homework-demo.png)
-
-![password generator demo](./img/03-javascript-homework-demo.png)
-
-
-![](./img/Capture.png)
 ## Review
 
 You are required to submit the following for review:
