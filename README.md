@@ -12,11 +12,14 @@ I WANT to randomly generate a password that meets certain criteria
 SO THAT I can create a strong password that provides greater security
 ```
 
-## Acceptance Criteria
 
+
+## Acceptance Criteria
 ```
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
+![](img/Capture%20a.PNG)
+
 THEN I am presented with a series of prompts for password criteria
 WHEN prompted for password criteria
 THEN I select which criteria to include in the password
