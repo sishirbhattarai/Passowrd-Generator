@@ -1,6 +1,6 @@
 # Live deployed site: https://sishirbhattarai.github.io/Passowrd-Generator/
 
-# Technology Used: HTML, CSS, JAVAScript, Bootstraps
+# Technology Used: HTML, CSS, JAVAScript
 
 # JavaScript: Password Generator
 
