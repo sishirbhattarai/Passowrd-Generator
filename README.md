@@ -1,4 +1,4 @@
-# Live site: https://sishirbhattarai.github.io/Passowrd-Generator/
+# Live deployed site: https://sishirbhattarai.github.io/Passowrd-Generator/
 
 # JavaScript: Password Generator
 
